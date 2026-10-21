@@ -1,0 +1,14 @@
+SURPRESA PARA ELISA ❤️
+
+COMO ABRIR
+1. Extraia o arquivo ZIP.
+2. Abra a pasta surpresa_elisa.
+3. Abra index.html no navegador (Chrome, por exemplo).
+
+ARQUIVOS
+- index.html: site completo com HTML, CSS e JavaScript.
+- fotos/elisa-foto-1.jpg e fotos/elisa-foto-2.jpg: fotos enviadas.
+
+OBSERVAÇÃO
+O contador começa em 02/10/2026, conforme informado. A data do aniversário aparece como 21 de outubro.
+Para publicar na internet, envie index.html e a pasta fotos para um serviço de hospedagem estática, como GitHub Pages ou Netlify.

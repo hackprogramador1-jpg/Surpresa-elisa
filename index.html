@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170b20">
+<title>Elisa ❤️ Nosso Universo</title>
+<style>
+:root{--bg:#100817;--pink:#ff6fae;--rose:#ff9ec9;--gold:#f7d58b;--text:#fff7fb;--muted:#d9c3d5;--glass:rgba(255,255,255,.075)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 15% 0%,#48203f 0,transparent 42%),radial-gradient(ellipse at 90% 35%,#2d1748 0,transparent 38%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:48px 48px;z-index:-1}
+a{color:inherit}
+button{font:inherit}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(16px,5vw,56px);background:rgba(16,8,23,.65);backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}
+.brand{font-weight:800;letter-spacing:.08em}.brand span{color:var(--pink)}
+.music{border:1px solid #ffffff30;background:#ffffff0d;color:white;padding:9px 13px;border-radius:999px;cursor:pointer}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px 20px 70px;position:relative;isolation:isolate}
+.hero-inner{max-width:850px;animation:rise 1s ease both}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.25em;font-size:.76rem;font-weight:700}
+h1{font-size:clamp(3.1rem,12vw,7.5rem);line-height:.95;letter-spacing:-.07em;margin:18px 0;background:linear-gradient(110deg,#fff 10%,#ff9ec9 47%,#f7d58b 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:620px;margin:22px auto;color:var(--muted);font-size:clamp(1rem,2.6vw,1.22rem);line-height:1.8}
+.pill{display:inline-flex;gap:9px;align-items:center;border:1px solid #ffffff25;background:#ffffff0b;padding:10px 15px;border-radius:999px;color:#ffe1ef;font-size:.9rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.btn{border:0;border-radius:999px;padding:14px 20px;font-weight:800;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}
+.primary{background:linear-gradient(110deg,var(--pink),#ffb6ce);color:#351027;box-shadow:0 8px 35px #ff6fae30}
+.secondary{background:#ffffff0d;color:white;border:1px solid #ffffff2b}
+.scroll{position:absolute;bottom:22px;color:#cbb4c9;font-size:.8rem;letter-spacing:.12em}
+section{padding:85px 20px;max-width:1120px;margin:auto}
+.section-tag{color:var(--pink);font-weight:800;text-transform:uppercase;letter-spacing:.2em;font-size:.75rem}
+h2{font-size:clamp(2rem,6vw,3.5rem);letter-spacing:-.045em;margin:10px 0 16px}
+.lead{color:var(--muted);line-height:1.8;max-width:680px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.photo-card{position:relative;overflow:hidden;border-radius:24px;background:var(--glass);border:1px solid #ffffff20;min-height:260px;box-shadow:0 18px 50px #0003}
+.photo-card img{width:100%;height:100%;min-height:350px;max-height:620px;object-fit:cover;display:block;transition:transform .7s}
+.photo-card:hover img{transform:scale(1.045)}
+.photo-caption{position:absolute;bottom:0;left:0;right:0;padding:30px 18px 18px;background:linear-gradient(transparent,#100817dd);font-weight:750}
+.quote-card{margin-top:28px;padding:clamp(25px,5vw,48px);border:1px solid #ffffff20;border-radius:28px;background:linear-gradient(135deg,#ffffff0d,#ff6fae0b);text-align:center}
+.quote-mark{font-size:3rem;color:var(--pink);line-height:1}
+.quote{font-size:clamp(1.2rem,3.7vw,2rem);line-height:1.55;font-weight:650;max-width:800px;margin:10px auto 18px}
+.signature{color:var(--gold);font-weight:800}
+.counter-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.counter{padding:22px 10px;text-align:center;border:1px solid #ffffff20;border-radius:20px;background:var(--glass)}
+.counter strong{display:block;font-size:clamp(1.8rem,5vw,3rem);color:var(--rose);line-height:1.2}
+.counter span{color:var(--muted);font-size:.85rem}
+.timeline{display:grid;gap:14px;margin-top:28px}
+.moment{display:flex;gap:16px;align-items:flex-start;padding:20px;border:1px solid #ffffff1a;background:#ffffff08;border-radius:18px}
+.moment-icon{flex:0 0 42px;height:42px;border-radius:14px;display:grid;place-items:center;background:#ff6fae20;font-size:1.3rem}
+.moment h3{margin:0 0 5px}.moment p{margin:0;color:var(--muted);line-height:1.7}
+.birthday{position:relative;text-align:center;overflow:hidden;border:1px solid #f7d58b50;border-radius:30px;padding:clamp(28px,6vw,60px);background:radial-gradient(ellipse at top,#7a3a5b77,transparent 65%),#ffffff08}
+.birthday h2{background:linear-gradient(90deg,#fff,var(--gold),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}
+.birthday .date{font-size:1.15rem;color:var(--gold);font-weight:800;letter-spacing:.1em}
+.hidden-message{display:none;margin:25px auto 0;max-width:720px;padding:22px;border-radius:18px;background:#120817b8;border:1px solid #ffffff20;line-height:1.9;color:#ffedf5;text-align:left;white-space:pre-line}
+.hidden-message.show{display:block;animation:rise .7s ease both}
+footer{text-align:center;padding:40px 20px 60px;color:#cbb4c9;font-size:.9rem}
+.heart{display:inline-block;color:var(--pink);animation:beat 1.2s infinite}
+.float-heart{position:fixed;bottom:-30px;z-index:20;pointer-events:none;animation:floatUp linear forwards;filter:drop-shadow(0 0 8px #ff6fae80)}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@media(max-width:650px){.gallery{grid-template-columns:1fr}.photo-card img{min-height:300px;max-height:520px}.counter-wrap{grid-template-columns:repeat(2,1fr)}section{padding:65px 18px}.topbar{padding:12px 16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<header class="topbar"><div class="brand">NOSSO <span>UNIVERSO</span> ✦</div><button class="music" id="heartButton" aria-label="Soltar corações">♡ mandar amor</button></header>
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="pill">✦ feito especialmente para você, Elisa ✦</div>
+    <div class="eyebrow" style="margin-top:24px">uma história que está começando</div>
+    <h1>Elisa<span class="heart">♥</span></h1>
+    <p>Entre tantas pessoas no mundo, a vida me deu a chance de encontrar você. E se depender de mim, ainda vamos colecionar muitos momentos, sorrisos e histórias juntos.</p>
+    <div class="pill">♡ Desde 02 de outubro de 2026</div>
+    <div class="actions"><a class="btn primary" href="#nossa-historia">Conheça nossa história ↓</a><button class="btn secondary" id="openLetter">Tenho algo pra te dizer ✉</button></div>
+  </div>
+  <div class="scroll">DESLIZE PARA DESCOBRIR ↓</div>
+</section>
+
+<section id="nossa-historia">
+  <div class="section-tag">meu lugar favorito</div>
+  <h2>Seu sorriso merece<br>um universo inteiro.</h2>
+  <p class="lead">Não precisava de uma ocasião perfeita para fazer algo especial por você. Eu só queria que existisse um cantinho no mundo feito para lembrar o quanto você é importante pra mim.</p>
+  <div class="gallery">
+    <article class="photo-card"><img src="fotos/elisa-foto-1.jpg" alt="Foto especial da Elisa" loading="lazy"><div class="photo-caption">O tipo de beleza que fica na memória. ✨</div></article>
+    <article class="photo-card"><img src="fotos/elisa-foto-2.jpg" alt="Mais um registro especial da Elisa" loading="lazy"><div class="photo-caption">E um sorriso que deixa tudo mais bonito. ♡</div></article>
+  </div>
+  <div class="quote-card"><div class="quote-mark">“</div><div class="quote">Eu não prometo ser perfeito. Prometo cuidar do que estamos construindo, te respeitar, te ouvir e demonstrar, nas pequenas coisas, que escolho você.</div><div class="signature">Com carinho, de mim para você ❤️</div></div>
+</section>
+
+<section id="tempo">
+  <div class="section-tag">nosso começo</div>
+  <h2>O começo de algo bonito.</h2>
+  <p class="lead">Nosso namoro começou em 2 de outubro de 2026. Que esse seja só o primeiro capítulo de uma história cheia de carinho, parceria e momentos inesquecíveis.</p>
+  <div class="counter-wrap" aria-label="Tempo desde o início do namoro">
+    <div class="counter"><strong id="days">—</strong><span>dias</span></div>
+    <div class="counter"><strong id="hours">—</strong><span>horas</span></div>
+    <div class="counter"><strong id="minutes">—</strong><span>minutos</span></div>
+    <div class="counter"><strong id="seconds">—</strong><span>segundos</span></div>
+  </div>
+  <div class="timeline">
+    <div class="moment"><div class="moment-icon">💞</div><div><h3>02/10/2026 — Nosso sim</h3><p>O dia em que começamos oficialmente essa caminhada. Que nunca falte vontade de fazer dar certo.</p></div></div>
+    <div class="moment"><div class="moment-icon">🎂</div><div><h3>21/10 — O seu dia</h3><p>O aniversário da menina que merece receber carinho não só hoje, mas em todos os dias do ano.</p></div></div>
+    <div class="moment"><div class="moment-icon">🌙</div><div><h3>Os próximos capítulos</h3><p>Ainda temos tanta coisa para viver. Quero transformar os dias comuns em lembranças especiais com você.</p></div></div>
+  </div>
+</section>
+
+<section id="aniversario">
+  <div class="birthday">
+    <div class="section-tag">um dia todinho seu</div>
+    <h2>Feliz aniversário, Elisa! 🎂</h2>
+    <div class="date">21 DE OUTUBRO</div>
+    <p class="lead" style="margin:18px auto">Que seu novo ciclo seja leve, cheio de saúde, paz, sonhos realizados e motivos sinceros para sorrir. Você merece coisas lindas — e espero poder estar presente em muitas delas.</p>
+    <button class="btn primary" id="birthdayButton">Abrir sua surpresa ✨</button>
+    <div class="hidden-message" id="letter">Elisa, feliz aniversário, meu amor! ❤️
+
+Eu queria conseguir estar aí pertinho de você, te abraçar e fazer esse dia ainda mais especial. Mesmo quando eu não conseguir estar presente fisicamente, quero que você saiba que meu carinho é verdadeiro.
+
+A gente começou a namorar no dia 02/10/2026, e eu quero cuidar desse começo com respeito, paciência, lealdade e muito amor. Não quero que minhas palavras sejam só bonitas: quero que minhas atitudes mostrem o que você significa pra mim.
+
+Que nunca faltem motivos para você sorrir, força para correr atrás dos seus sonhos e pessoas que te tratem com o carinho que você merece. Obrigado por fazer parte da minha vida.
+
+Feliz aniversário, Elisa. Que esse seja o primeiro de muitos aniversários em que eu possa te lembrar o quanto você é especial. Eu escolho você, hoje e quero continuar escolhendo nos próximos capítulos. 💗
+
+Com todo meu carinho, ❤️</div>
+  </div>
+</section>
+</main>
+<footer>Feito com <span class="heart">♥</span> especialmente para Elisa.<br><span style="display:inline-block;margin-top:8px">02.10.2026 — o início da nossa história</span></footer>
+<script>
+const start = new Date(2026, 9, 2, 0, 0, 0); // mês 9 = outubro
+function updateCounter(){
+  const now = new Date();
+  let diff = Math.max(0, now - start);
+  const d = Math.floor(diff / 86400000); diff %= 86400000;
+  const h = Math.floor(diff / 3600000); diff %= 3600000;
+  const m = Math.floor(diff / 60000); const s = Math.floor((now - start) / 1000) % 60;
+  document.getElementById('days').textContent = d;
+  document.getElementById('hours').textContent = h;
+  document.getElementById('minutes').textContent = m;
+  document.getElementById('seconds').textContent = s;
+}
+updateCounter(); setInterval(updateCounter, 1000);
+const letter = document.getElementById('letter');
+function openLetter(){letter.classList.add('show');document.getElementById('aniversario').scrollIntoView({behavior:'smooth'});hearts(18);}
+document.getElementById('openLetter').addEventListener('click',openLetter);
+document.getElementById('birthdayButton').addEventListener('click',()=>{letter.classList.toggle('show');hearts(35);});
+document.getElementById('heartButton').addEventListener('click',()=>hearts(18));
+function hearts(n){
+  const symbols=['♥','♡','💗','✨'];
+  for(let i=0;i<n;i++){
+    const el=document.createElement('span');el.className='float-heart';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+'vw';el.style.fontSize=(16+Math.random()*25)+'px';el.style.color=['#ff6fae','#ff9ec9','#f7d58b'][Math.floor(Math.random()*3)];
+    el.style.animationDuration=(3+Math.random()*3)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),6500);
+  }
+}
+// Canvas confetti burst, drawn only after user interaction.
+const canvas=document.getElementById('confetti'),ctx=canvas.getContext('2d');let pieces=[],raf=0;
+function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
+addEventListener('resize',resize);resize();
+function burst(){
+  pieces=Array.from({length:120},()=>({x:innerWidth/2,y:innerHeight*.45,vx:(Math.random()-.5)*10,vy:-Math.random()*9-2,size:3+Math.random()*5,life:90+Math.random()*40,rot:Math.random()*6,color:['#ff6fae','#f7d58b','#ffffff','#c78bff'][Math.floor(Math.random()*4)]}));
+  cancelAnimationFrame(raf);draw();
+}
+function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);pieces=pieces.filter(p=>p.life-->0);for(const p of pieces){p.x+=p.vx;p.y+=p.vy;p.vy+=.13;p.rot+=.08;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.color;ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*1.6);ctx.restore()}if(pieces.length)raf=requestAnimationFrame(draw);else ctx.clearRect(0,0,innerWidth,innerHeight)}
+document.getElementById('birthdayButton').addEventListener('click',burst);
+</script>
+</body>
+</html>
